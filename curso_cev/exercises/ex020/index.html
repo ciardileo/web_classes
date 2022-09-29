@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            font-weight: bold;
+        }
+
+        a:visited{
+            color: darkred;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+
+        a:active{
+            color: yellow;
+        }
+
+        a::before{
+            content: " <=";
+        }
+
+        a::after{
+            content: "=> ";
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a target="_blank" href="https://youtube.com">Youtube</a></li>
+        <li><a target="_blank" href="https://wikipedia.com">Wikipédia</a></li>
+        <li><a target="_blank" href="https://facebook.com">Facebook</a></li>
+    </ul>
+</body>
+</html>
+
+<!--
+    Seletores personalizados:
+    id (#): usados para um único elemento
+    class (.): usados para vários elementos
+    pseudo-classe (:): configura o elemento em diferentes estados
+    pseudo-elemento (::): configura o conteúdo do elemento
+    elemento filho (>): configura elementos dentro de outros
+-->

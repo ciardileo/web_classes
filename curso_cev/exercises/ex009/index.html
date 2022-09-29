@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas em HTML</title>
+</head>
+<body>
+    <h1>Imamges Dinâmica</h1>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="images/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="images/foto-m.png" type="image/png">
+        <img src="images/foto_g.png" alt="Foto Grande">
+    </picture>
+
+</body>
+</html>
+
+<!-- 
+    <picture> - tag de img comum
+    <source> - especifica imagem para telas diferentes
+    !!! OS SOURCES DEVEM ESTAR EM ORDEM (PEQUENA -> MÉDIA -> GRANDE OU INVERSA) !!!
+-->

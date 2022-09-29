@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+    background-color: aqua;
+    font: normal 13px Arial, sans-serif;
+}
+
+h1{
+    color: rgb(19, 80, 60);
+}
+
+h1#principal{
+    text-align: center;
+}
+
+h2{
+    color: rgb(33, 124, 94);
+}
+
+.primeiro{
+    color: blue;
+}
+
+.segundo{
+    color: red;
+}
+
+/* 
+class em CSS é .
+id em CSS é #
+*/

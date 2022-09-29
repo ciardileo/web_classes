@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colocando Áudio no HTML</title>
+</head>
+<body>
+    <h1>Reproduzindo Áudio Local em HTML</h1>
+    <!-- <audio src="media/Forget The World.mp3" controls autoplay></audio> -->
+    <audio preload="metadata" controls>
+        <source src="media/Forget The World.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
+
+<!--
+    <audio> - envia um áudio:
+        autoplay - toca automaticamente
+        controls - mostra controles de áudio
+        preload - o que o site carregará do audio ao iniciar o site:
+            metadata - apenas dados do áudio
+        loop - loop
+-->
