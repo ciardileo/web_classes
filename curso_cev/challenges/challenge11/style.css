@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+    height: 98vh;
+    background: black url("images/espaco.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 80%;
+}
+
+/* scroll bar personalization */
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #271F30;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #242c5c;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #271F30;  /* creates padding around scroll thumb */
+  }
