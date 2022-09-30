@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralização vertical de contêiner</title>
+    <style>
+        #conteiner{
+            height: 500px;
+            background-color: purple;
+            padding: 10px;
+            position: relative; /* vem por padrão nos elementos */
+            background-image: url("images/target001.png");
+            background-size: 100% 100%;
+        }
+
+        #conteudo{
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            margin: auto; /* centraliza horizontalmente */
+            position: absolute;
+            left: 50%; /* distância da tela em relação a esquerda -> usa como referência o canto superior esquerdo do elemento */
+            top: 50%; /* distância da tela em relação ao topo */
+
+            transform: translate(-50%, -50%); /* desloca o elemento, pode ser em % (em relação ao tamanho dele) ou em px */
+        }
+    </style>
+</head>
+<body>
+    <section id="conteiner">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
