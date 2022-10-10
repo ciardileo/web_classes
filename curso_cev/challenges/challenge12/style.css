@@ -15,8 +15,9 @@ header{
 }
 
 header h1{
-    font: bolder 4em "Verdana", sans-serif;
+    font: bolder 10vw "Verdana", sans-serif; /* vw -> view port width */
     padding: 20px;
+    font-variant: small-caps;
 }
 
 header p{
@@ -32,29 +33,39 @@ header a{
 /* main */
 
 main p{
-    padding: 70px;
-    font: italic 500 2em "Times New Roman", serif;
-    line-height: 50px;
+    font: italic 600 4.5vw "Times New Roman", serif;
+    line-height: 2em;
 }
 
+section{
+    padding: 70px;
+}
 
 
 section#bg1{
     background: black url("imagens/background001.jpg") center center no-repeat fixed;
-    box-shadow: 1px 2px 5px black;
+    background-size: cover;
+    box-shadow: inset 1px 2px 5px black; /* inset => sombra para dentro */
 }
 
 section#bg1 p{
+    display: inline-block; /* a caixa se adapta ao conteúdo */
     color: white;
+    background-color: rgba(0, 0, 0, 0.288);
+    padding: 5px;
 }
 
 section#bg2{
     background: black url("imagens/background002.jpg") center center no-repeat fixed;
-    box-shadow: 1px 2px 5px black;
+    background-size: cover;
+    box-shadow: inset 1px 1px 5px black;
 }
 
 section#bg2 p{
+    display: inline-block;
     color: white;
+    background-color: rgba(0, 0, 0, 0.288);
+    padding: 5px;
 }
 
 /* footer */
