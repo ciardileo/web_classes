@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em HTML</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse; /* as bordas não vaõ ter um espaçamento */
+            border: 2px solid black;
+        }
+
+        tr.linha{
+            background-color: beige;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center; /* alinhamento horizontal */
+            vertical-align: top; /* alinhamento vertical */
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeira tabela em HTML</h1>
+    <table>
+        <tr>
+            <td>A1
+            <td>B1
+            <td>C1
+
+        <tr class="linha">
+            <td>A2
+            <td>B2
+            <td>C2
+
+        <tr>
+            <td>A3
+            <td>B3
+            <td>C3
+
+        <tr class="linha">
+            <td>A4
+            <td>B4
+            <td>C4
+
+    </table>
+</body>
+</html>
+
+<!-- Fechamento do <tr> e <td> é opcional
+    Se a hierarquia da tabela não for obedecida, os dados aparecerão antes ou depois da tabela -->
