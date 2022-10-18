@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Final</title>
+    <style>
+
+        h1{
+            text-align: center;
+        } 
+
+        caption{ 
+            font: bolder 1.5em "Segoe UI", sans-serif;
+            padding: 10px;
+        }
+
+        table{
+            width: 800px;
+            border-collapse: collapse; /* tira o espaçamento entre as bordas */
+            margin: auto;
+            position: relative; /* propriedade para poder fazer o cabeçalo fixo */
+        }
+
+        thead{
+	        position: sticky; /* configuração para cabeçalho fixo */
+	        top: -1px;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th{
+            background-color: aliceblue;
+        }
+
+        tr:nth-child(even){
+            background-color: rgb(228, 228, 228); /* faz com que as linhas pares fiquem com uma cor diferente */
+        }
+
+        .my{ /* classe aplicada a uma coluna inteira específica com o colgroup */
+            background-color: bisque;
+        }
+
+        div#container{ /* caso haja muito conteúdo horizontal para scrollar, apenas a tabela será scrollável e não o site todo */
+            overflow-x: auto;
+        }
+
+        .num{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercício Final das Tabelas</h1>
+    </header>
+
+    <main>
+        <div id="container"> <!-- div usada para configurar a scrollagem da tabela no css -->
+            <table> <!-- tag principal de tabela-->
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col class="my">
+                    <col>
+                    <col>
+                </colgroup>
+
+                <caption> <!-- legenda da tabela -->
+                    Melhores e Piores Jogos de 2018
+                </caption>
+
+                <thead> <!-- cabeçalho da tabela -->
+                    <tr> <!-- linha da tabela -->
+                        <th scope="col" rowspan="2">Jogo</th> <!-- títulos na tabela, scope -> onde estão os dados, row/colspan -> mescla linhas -->
+                        <th scope="col" rowspan="2">Desenvolvedora</th>
+                        <th scope="col" rowspan="2">Publisher</th>
+                        <th scope="colgroup" colspan="3">Notas</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Minha Nota (0 a 10)</th>
+                        <th scope="col">Metacritic</th>
+                        <th scope="col">IMDB</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- tag de conteúdo da tabela -->
+                    <tr>
+                        <td>God of War</td> <!-- campo de dado da tabela -->
+                        <td>Santa Monica</td>
+                        <td>Santa Monica</td>
+                        <td class="num">0</td>
+                        <td class="num">94</td>
+                        <td class="num">9.8</td>
+                    </tr>
+                    <tr>
+                        <td>Metal Gear Survive</td>
+                        <td>Konami</td>
+                        <td>Konami</td>
+                        <td class="num">10</td>
+                        <td class="num">60</td>
+                        <td class="num">1.8</td>
+                    </tr>
+                    <tr>
+                        <td>Getting Over it with Bennett Foddy</td>
+                        <td>Bennett Foddy</td>
+                        <td>Benete Fode</td>
+                        <td class="num">10</td>
+                        <td class="num">Não Tem</td>
+                        <td class="num">Não Tem</td>
+                    </tr>
+            
+                    <tr>
+                        <td>The First of Them</td>
+                        <td>SGO Studios</td>
+                        <td>SGO Studios</td>
+                        <td class="num">10</td>
+                        <td class="num">0</td>
+                        <td class="num">0</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Média das notas</th>
+                        <td class="num">7.5</td>
+                        <td class="num">38.5</td>
+                        <td class="num">2.9</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
