@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo final de formulários</title>
+</head>
+<body>
+    <h1>Quem é você?</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required size="15">
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </p>
+            
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" minlength="8" maxlength="30" placeholder="No mínimo 8 dígitos" required>
+            </p>
+
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" minlength="9">
+            </p>
+
+            <p>
+                <label for="sexo">Sexo: </label>
+                <input type="radio" name="sexo" id="masculino">Masculino
+                <input type="radio" name="sexo" id="feminino">Feminino
+            </p>
+
+            <p>
+                <label for="ano">Ano de nascimento:</label>
+                <input type="number" name="ano" id="ano" min="1900" max="2022" value="2000" oninput="calcIdade()" required>
+            </p>
+
+            <p>
+                <label for="idade">Sua idade:</label>
+                <output name="idade" id="idade">0</output>
+            </p>
+
+            <p>
+                <label for="estado">Estado:</label>
+            </p>
+
+        
+        </fieldset>
+
+        <fieldset>
+            <legend>Outros</legend>
+
+            <p>
+                <label for="data">Data da pesquisa</label>
+                <input type="date" name="data" id="data">
+            </p>
+
+            <p>
+                <label for="horario">Horário da pesquisa:</label>
+                <input type="time" name="horario" id="horario">
+            </p>
+
+            <fieldset>
+                <legend>Preferências</legend>
+
+                <p>
+                    <label for="cor">Cor favorita:</label>
+                    <input type="color" name="cor" id="cor">
+                </p>
+
+                <p>
+                    <label for="mes">Mês favorito:</label>
+                    <input type="month" name="mes" id="mes">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Esportes</legend>
+
+            </fieldset>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetar">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            idade.innerHTML = Number(atual) - Number(ano.value)
+        }
+    </script>
+</body>
+</html>
