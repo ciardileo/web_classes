@@ -13,28 +13,33 @@
             <legend>Dados pessoais</legend>
             <p>
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required size="15">
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required size="25" autocomplete="name">
             </p>
 
             <p>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required autocomplete="email" size="25">
             </p>
             
             <p>
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" minlength="8" maxlength="30" placeholder="No mínimo 8 dígitos" required>
+                <input type="password" name="senha" id="senha" minlength="8" maxlength="30" placeholder="No mínimo 8 dígitos" required autocomplete="current-password">
             </p>
 
             <p>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" minlength="9">
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" minlength="9" autocomplete="tel">
+            </p>
+
+            <p>
+                <label for="image">Envie uma imagem de seu rosto:</label>
+                <input type="file" name="image" id="image">
             </p>
 
             <p>
                 <label for="sexo">Sexo: </label>
-                <input type="radio" name="sexo" id="masculino">Masculino
-                <input type="radio" name="sexo" id="feminino">Feminino
+                <input type="radio" name="sexo" id="masculino"><label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino"><label for="feminino">Feminino</label>
             </p>
 
             <p>
@@ -49,23 +54,59 @@
 
             <p>
                 <label for="estado">Estado:</label>
+                <select name="state" id="state">
+                    <optgroup label="Região Sudeste">
+                        <option value="sp">São Paulo</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                    </optgroup>
+                    
+                    <optgroup label="Região Norte">
+                        <option value="pa">Pará</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ro">Roraima</option>
+                    </optgroup>
+                </select>
             </p>
 
-        
+            <p>
+                <label for="profession">Profissão:</label>
+                <input type="text" name="profession" id="profession" list="proflist">
+                <datalist id="proflist">
+                    <option value="prof">Professor</option>
+                    <option value="cop">Policial</option>
+                    <option value="dev">Desenvolvedor</option>
+                    <option value="eng">Engenheiro</option>
+                </datalist>
+            </p>
         </fieldset>
 
         <fieldset>
             <legend>Outros</legend>
 
-            <p>
-                <label for="data">Data da pesquisa</label>
-                <input type="date" name="data" id="data">
-            </p>
+            <fieldset>
+                <legend>Pesquisa</legend>
+                <p>
+                    <label for="aval">Como você avalia essa pesquisa?</label><br>
+                    <input type="range" name="aval" id="aval" min="0" max="5" value="3" oninput="avalrange.innerHTML = aval.value" step="1"><output id="avalrange">3</output>
+                </p>
 
-            <p>
-                <label for="horario">Horário da pesquisa:</label>
-                <input type="time" name="horario" id="horario">
-            </p>
+                <p>
+                    <label for="data">Data da pesquisa</label>
+                    <input type="date" name="data" id="data">
+                </p>
+
+                <p>
+                    <label for="horario">Horário da pesquisa:</label>
+                    <input type="time" name="horario" id="horario">
+                </p>
+
+                <p>
+                    <label for="obs">Observações:</label><br>
+                    <textarea name="obs" id="obs" cols="50" rows="10"></textarea>
+                </p>
+            </fieldset>
 
             <fieldset>
                 <legend>Preferências</legend>
@@ -82,8 +123,10 @@
             </fieldset>
 
             <fieldset>
-                <legend>Esportes</legend>
-
+                <legend>Esportes favoritos</legend>
+                <input type="checkbox" name="bask" id="bask"><label for="bask">Basquete</label><br>
+                <input type="checkbox" name="soccer" id="soccer"><label for="soccer">Futebol</label><br>
+                <input type="checkbox" name="baseball" id="baseball"><label for="baseball">Baseball</label><br>
             </fieldset>
         </fieldset>
         <p>
