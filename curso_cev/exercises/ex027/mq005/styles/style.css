@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Arial";
+}
+
+body, html{
+    background-color: lightgrey;
+}
+
+header{
+    background-color: darkgray;
+}
+
+header > h1{
+    padding: 10px;
+    text-align: center;
+}
+
+menu{
+    display: block;
+}
+
+menu > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: gray;
+    margin: 5px;
+}
+
+menu > ul > li > a:hover{
+    background-color: darkslategray;
+}
+
+main{
+    margin: 10px 50px 19px 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: beige;
+}
