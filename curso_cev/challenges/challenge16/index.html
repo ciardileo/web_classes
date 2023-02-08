@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <title>Tela de Login Responsiva</title>
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+                
+            </div>
+
+            <div id="form">
+                <h1>Welcome to Opressor</h1>
+                <p>Faça login com sua conta do Google para prosseguir</p>
+                <form action="login.php" method="get">
+                    <input type="email" name="email" id="email" placeholder="Email do Usuário" required>
+
+                    <input type="password" name="pass" id="pass" placeholder="Senha do Email" required minlength="8">
+
+                    <input id="button" type="submit" value="Login">
+                    <a href="#" id="forgot">Esqueci a senha</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* configurações gerais */
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100vh;
+    background: #271f30 url("../images/fundo.png") no-repeat;
+    background-size: cover;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 80vw;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.589);
+    background-color: #fefffe;
+
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+
+/* configurações da imagem */
+div#imagem{
+    display: block;
+    background: url("../images/img.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+
+/* configurações do formulário */
+div#form{
+    display: block;
+    padding: 10px;
+}
+
+input#email, input#pass, input#button{
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px black;
+    width: 90%;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+div#form > p, h1{
+    text-align: center;
+}
+
+input#button{
+    background-color: #00ff8b;
+    border: 2px solid #271f3070;
+    transition: 0.5s;
+}
+
+input#button:hover{
+    background-color: #7d68f7;
+    color: white;
+    cursor: pointer;
+}
+
+a#forgot{
+    color: #7d68f7;
+    display: block;
+    margin: 10px 0px 0px 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a#forgot:hover{
+   color: #00ff8b;
+}
+
+
+
+

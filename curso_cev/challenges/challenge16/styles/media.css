@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* media query para dispositivos grandes */
+@media screen and (min-width: 768px) and (max-width:992px){
+    section#login{
+        display: flex;
+        width: 90vw;
+    }
+
+    section#login > div#imagem{
+        width: 300px;
+        height: 400px;
+    }
+
+    section#login > div#form{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    section#login{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90vw;
+    }
+
+    section#login > div#imagem{
+        width: 600px;
+        height: 400px;
+    }
+
+    section#login > div#form{
+        width: 70%;
+    }
+
+    a#forgot{
+        padding-left: 3%;
+    }
+}
