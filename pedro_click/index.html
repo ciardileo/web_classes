@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Site de Click do Pedro</title>
+</head>
+<body>
+    <div>
+        <button id="btn">Clique aqui!</button>
+        <p id="clicks">Você clicou nesse botão 0 vezes nesta sessão!</p>
+    </div>
+
+    <script>
+        var p = document.getElementById("clicks")
+        var btn = document.getElementById("btn")
+        var clicks = 0 
+
+        btn.addEventListener("click", clicar)
+
+        function clicar(){
+            clicks = clicks + 1
+            p.innerHTML = `Você clicou nesse botão ${clicks} vezes nesta sessão`
+        }
+    </script>
+</body>
+</html>
