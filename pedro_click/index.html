@@ -9,8 +9,8 @@
 </head>
 <body>
     <div>
-        <button id="btn">Clique aqui!</button>
-        <p id="clicks">Você clicou nesse botão 0 vezes nesta sessão!</p>
+        <button id="btn">Clica pedro</button>
+        <p id="clicks">Você clicou nesse botão 0 vezes pedro</p>
     </div>
 
     <script>
@@ -22,7 +22,12 @@
 
         function clicar(){
             clicks = clicks + 1
-            p.innerHTML = `Você clicou nesse botão ${clicks} vezes nesta sessão`
+            
+            if (clicks = 50){
+                p.innerHTML = "Vai embora caralho"
+            } else{
+                p.innerHTML = `Você clicou nesse botão ${clicks} vezes nesta sessão`
+            }
         }
     </script>
 </body>
