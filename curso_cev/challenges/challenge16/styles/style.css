@@ -43,6 +43,7 @@ section#login{
 div#imagem{
     display: block;
     background: url("../images/img.jpeg");
+    filter: blur(8px);
     background-size: cover;
     background-position: center center;
     height: 200px;
